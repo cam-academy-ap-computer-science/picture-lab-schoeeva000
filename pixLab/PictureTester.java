@@ -26,6 +26,26 @@ public class PictureTester
 	    beach.explore();
   }
   
+  public static void testKeepOnlyRed() {
+	  Picture beach = new Picture("U:/git/picture-lab-schoeeva000/images/beach.jpg");
+	    beach.explore();
+	    beach.keepOnlyRed();
+	    beach.explore();
+  }
+  
+  public static void testNegate() {
+	  Picture beach = new Picture("U:/git/picture-lab-schoeeva000/images/beach.jpg");
+	  beach.negate();
+	  beach.explore();
+  }
+  
+  public static void testGrayscale() {
+	  Picture beach = new Picture("U:/git/picture-lab-schoeeva000/images/beach.jpg");
+	  beach.grayscale();
+	  beach.explore();
+  }
+  
+  
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -33,6 +53,22 @@ public class PictureTester
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
+    caterpillar.explore();
+  }
+  
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("U:/git/picture-lab-schoeeva000/images/caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("U:/git/picture-lab-schoeeva000/images/redMotorcycle.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
     caterpillar.explore();
   }
   
@@ -61,6 +97,7 @@ public class PictureTester
     swan.explore();
   }
   
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -71,13 +108,15 @@ public class PictureTester
 	  
 	  
     //testZeroBlue();
-    testKeepOnlyBlue();
+    //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+	//testMirrorVerticalRightToLeft();
+	  testMirrorHorizontal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
