@@ -103,6 +103,14 @@ public class PictureTester
   }
   
   
+  public static void testGreenExtraCredit() {
+	  Picture dog = new Picture("./images/dog.jpg");
+	  dog.explore();
+	  dog.zeroGreen();
+	  dog.explore();
+  }
+  
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -112,13 +120,15 @@ public class PictureTester
     // to run
 	  
 	  
+	  testGreenExtraCredit();
+	  
     //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
-    testFixUnderwater();
+    //testFixUnderwater();
     //testMirrorVertical();
 	//testMirrorVerticalRightToLeft();
 	//testMirrorHorizontal();
