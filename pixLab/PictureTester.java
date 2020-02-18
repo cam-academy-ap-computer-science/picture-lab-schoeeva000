@@ -154,7 +154,7 @@ public class PictureTester
     //testMirrorTemple();
 	//testMirrorArms();
     //testMirrorArms();
-    //testMirrorGull();
+    testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();

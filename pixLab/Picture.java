@@ -276,7 +276,7 @@ public class Picture extends SimplePicture
   }
   
   public void mirrorSeagull() {
-	  int mirrorPoint = 350;
+	  int mirrorPoint = 230;
 	  Pixel leftPixel = null;
 	  Pixel rightPixel = null;
 	  Pixel[][] pixels = this.getPixels2D();
