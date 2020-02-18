@@ -395,10 +395,10 @@ public class Picture extends SimplePicture
   {
     Pixel leftPixel = null;
     Pixel rightPixel = null;
-    Pixel upperPixel = null;
+    Pixel lowerPixel = null;
     Pixel[][] pixels = this.getPixels2D();
     Color rightColor = null;
-    Color upperColor = null;
+    Color lowerColor = null;
     for (int row = 0; row < pixels.length; row++)
     {
       for (int col = 0; 
@@ -407,15 +407,15 @@ public class Picture extends SimplePicture
         leftPixel = pixels[row][col];
         rightPixel = pixels[row][col+1];
         if (row-1 < 0) {
-        	upperPixel = pixels[row][col];
+        	lowerPixel = pixels[row][col];
         } else {
-        upperPixel = pixels[row-1][col];
+        	lowerPixel = pixels[row-1][col];
         }
         rightColor = rightPixel.getColor();
-        upperColor = upperPixel.getColor();
+        lowerColor = lowerPixel.getColor();
         if (leftPixel.colorDistance(rightColor) > edgeDist) {
         	leftPixel.setColor(Color.BLACK);
-      } else if ((leftPixel.colorDistance(upperColor)) > edgeDist) {
+      } else if ((leftPixel.colorDistance(lowerColor)) > edgeDist) {
     	  leftPixel.setColor(Color.BLACK);
       } else {
           leftPixel.setColor(Color.WHITE);
@@ -429,7 +429,7 @@ public class Picture extends SimplePicture
    */
   public static void main(String[] args) 
   {
-    Picture beach = new Picture("U:/git/picture-lab-schoeeva000/images/beach.jpg");
+    Picture beach = new Picture("./images/beach.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
